@@ -2,7 +2,7 @@
 
 AI Telegram chatbot yang menggunakan OpenClaw sebagai agent orchestration layer dan OpenRouter sebagai LLM gateway. Project ini dibuat untuk membangun chatbot yang bisa diakses melalui Telegram, menjalankan workflow agent, dan memilih model LLM secara fleksibel melalui OpenRouter.
 
-## Demo
+## Dokumentasi Project
 
 ### Telegram Chat
 
