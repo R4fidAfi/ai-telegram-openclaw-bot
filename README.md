@@ -40,25 +40,6 @@ flowchart LR
   telegram --> user
 ```
 
-## Struktur Repository
-
-```txt
-src/
-  bot/
-  agent/
-  llm/
-  config/
-docs/
-  screenshots/
-  architecture.md
-  setup-openclaw.md
-  demo.md
-tests/
-.env.example
-.gitignore
-openclaw.example.json
-README.md
-```
 
 ## Environment Variables
 
@@ -72,44 +53,3 @@ DEFAULT_MODEL=openai/gpt-4.1-mini
 OPENCLAW_HOME=
 NODE_ENV=development
 ```
-
-Jangan commit file `.env`, token Telegram, API key OpenRouter, atau folder konfigurasi `.openclaw`.
-
-## OpenClaw
-
-Folder OpenClaw lokal biasanya berada di:
-
-```txt
-/home/<linux-user>/.openclaw
-```
-
-Untuk project portfolio, folder tersebut tidak dimasukkan langsung ke GitHub. Repository ini hanya menyimpan contoh konfigurasi, dokumentasi setup, dan kode integrasi yang aman dibagikan.
-
-## Demo
-
-Tambahkan screenshot atau video singkat ke folder `docs/screenshots/`, misalnya:
-
-- Percakapan user dengan bot Telegram.
-- Contoh pemilihan model LLM.
-- Contoh response dari AI agent.
-- Contoh error handling ketika provider/model gagal.
-
-## Roadmap
-
-- Menambahkan command Telegram untuk memilih model.
-- Menambahkan memory percakapan.
-- Menambahkan tool calling melalui OpenClaw.
-- Menambahkan test untuk handler Telegram dan OpenRouter client.
-- Menambahkan deployment guide untuk VPS, Railway, Render, atau Vercel.
-
-## Security Notes
-
-File berikut tidak boleh masuk GitHub:
-
-- `.env`
-- `.openclaw/`
-- `openclaw.json`
-- API key dan token pribadi
-- Session/cache runtime
-- Log yang mengandung data user
-
