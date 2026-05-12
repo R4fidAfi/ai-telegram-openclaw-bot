@@ -6,31 +6,17 @@ AI Telegram chatbot yang menggunakan OpenClaw sebagai agent orchestration layer 
 
 ### Telegram Chat
 
-Simpan screenshot percakapan Telegram ke path berikut agar tampil otomatis di GitHub:
-
-```txt
-docs/screenshots/telegram-chat-demo.png
-```
 
 ![Telegram chat demo](docs/screenshots/telegram-chat-demo.png)
 
 ### OpenRouter Model Selection
 
-Simpan screenshot pemilihan model atau konfigurasi model ke path berikut:
-
-```txt
-docs/screenshots/openrouter-model-selection.png
-```
 
 ![OpenRouter model selection](docs/screenshots/openrouter-model-selection.png)
 
 ### Demo Video
 
-Simpan video demo ke path berikut:
 
-```txt
-docs/videos/telegram-bot-demo.mp4
-```
 
 [Watch Telegram bot demo](docs/videos/telegram-bot-demo.mp4)
 
@@ -114,31 +100,7 @@ openclaw.example.json
 README.md
 ```
 
-## Environment Variables
 
-Salin `.env.example` menjadi `.env`, lalu isi credential di mesin lokal atau platform deployment.
-
-```env
-TELEGRAM_BOT_TOKEN=
-OPENROUTER_API_KEY=
-OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
-DEFAULT_MODEL=openai/gpt-4.1-mini
-OPENCLAW_HOME=
-NODE_ENV=development
-```
-
-Jangan commit file `.env`, token Telegram, API key OpenRouter, atau folder konfigurasi `.openclaw`.
-
-## OpenClaw Setup
-
-Contoh lokasi OpenClaw di WSL:
-
-```txt
-/home/afiyantorfid/.openclaw
-/home/afiyantorfid/.nvm/versions/node/v22.16.0/lib/node_modules/openclaw
-```
-
-Folder `.openclaw` tidak dimasukkan langsung ke repository karena dapat berisi konfigurasi pribadi, token, session, cache, atau data runtime. Repository ini hanya menyimpan contoh konfigurasi dan dokumentasi setup yang aman untuk GitHub.
 
 ## OpenRouter Model Routing
 
@@ -156,37 +118,3 @@ Model default disimpan melalui environment variable:
 ```env
 DEFAULT_MODEL=openai/gpt-4.1-mini
 ```
-
-## Security Notes
-
-File dan data berikut tidak boleh masuk GitHub:
-
-- `.env`
-- `.openclaw/`
-- `openclaw.json`
-- `openclaw.json.bak`
-- Telegram bot token
-- OpenRouter API key
-- Session/cache runtime
-- Log percakapan yang mengandung data pribadi
-
-## Media Checklist
-
-Sebelum repository dipublikasikan, pastikan file demo berikut sudah ditambahkan:
-
-```txt
-docs/screenshots/telegram-chat-demo.png
-docs/screenshots/openrouter-model-selection.png
-docs/videos/telegram-bot-demo.mp4
-```
-
-Sebelum upload, blur atau sembunyikan token, API key, chat ID, nomor telepon, username pribadi, dan data percakapan sensitif.
-
-## Roadmap
-
-- Menambahkan command Telegram untuk memilih model.
-- Menambahkan memory percakapan.
-- Menambahkan tool calling melalui OpenClaw.
-- Menambahkan test untuk handler Telegram dan OpenRouter client.
-- Menambahkan deployment guide untuk VPS, Railway, Render, atau Vercel.
-
